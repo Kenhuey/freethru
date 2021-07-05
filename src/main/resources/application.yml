@@ -1,0 +1,29 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.99.103:10010/freethru?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 24 # Warn: WHEN POOL SIZE TOO LARGE WOULD CAUSE DATABASE CONNECTION FAIL.
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update # Warn: DO NOT CHANGE THIS VALUE.
+    open-in-view: false
+
+app:
+  wechatAppId: wxcac948b9327d09ce
+  wechatAppSecret: 18b61a95711c215ff1bd86914d2eea32
+  frontJwtTokenSecret: useruseruser
+  frontJwtTokenExpiresMinute: 60
+  adminJwtTokenSecret: adminadminadmin
+  adminJwtTokenExpiresMinute: 60
+  adminUserPassWordSalt: saltsaltsalt
+  adminDefaultRegisterCode: test
